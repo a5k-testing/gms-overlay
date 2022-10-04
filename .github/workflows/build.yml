@@ -22,8 +22,9 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: "build"
-        env:
-          TERM: "dumb"
+      - name: "List"
+        run: |
+          ls -ARFl --color=always -- .
       - name: "Upload artifact"
         if: "${{ github.ref == 'refs/heads/main' }}"
         uses: actions/upload-artifact@v3
