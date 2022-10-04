@@ -11,6 +11,10 @@ buildscript {
     ext.androidTargetSdk = 33
     ext.androidCompileSdk = 33
 
+    repositories {
+        google()
+    }
+
     dependencies {
         classpath "com.android.tools.build:gradle:$androidBuildGradleVersion"
     }
