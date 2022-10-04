@@ -1,0 +1,29 @@
+---
+name: "Gradle build"
+on:
+  - push
+  - pull_request
+  - workflow_dispatch
+
+jobs:
+  build:
+    name: "Gradle build"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Check out code"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: "Set up Java"
+        uses: actions/setup-java@v2
+        with:
+          distribution: "zulu"
+          java-version: "11"
+      - name: "Gradle build"
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: "build"
+        env:
+          TERM: "dumb"
+ 
