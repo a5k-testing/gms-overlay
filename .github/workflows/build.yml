@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: "GMS overlay (extract it)"
-          path: " gms-overlay/build/outputs/apk/release/*.apk"
+          path: " gms-overlay/src/build/outputs/apk/release/*.apk"
           retention-days: 7
