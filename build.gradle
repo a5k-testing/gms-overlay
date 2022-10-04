@@ -1,0 +1,21 @@
+// -*- coding: utf-8; mode: conf-javaprop -*-
+// SPDX-FileCopyrightText: (c) 2022 ale5000
+// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-FileType: SOURCE
+
+buildscript {
+    ext.androidBuildGradleVersion = '7.2.1'
+    ext.androidBuildVersionTools = '33.0.0'
+
+    ext.androidMinSdk = 21
+    ext.androidTargetSdk = 33
+    ext.androidCompileSdk = 33
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$androidBuildGradleVersion"
+    }
+}
+
+subprojects {
+    group = 'net.ale5000'
+}
