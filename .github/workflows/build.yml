@@ -28,6 +28,6 @@ jobs:
         if: "${{ github.ref == 'refs/heads/main' }}"
         uses: actions/upload-artifact@v3
         with:
-          name: "gms-overlay"
-          path: "build/outputs/apk/*/*.apk"
+          name: "GMS overlay (extract it)"
+          path: " gms-overlay/build/outputs/apk/release/*.apk"
           retention-days: 7
