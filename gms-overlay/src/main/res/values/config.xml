@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: none
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileType: SOURCE
+-->
+
+<resources>
+    <bool name="config_enableAutoPowerModes">true</bool>
+    <bool name="config_autoPowerModePrefetchLocation">true</bool>
+
+    <bool name="config_enableNetworkLocationOverlay" translatable="false">true</bool>
+    <string name="config_networkLocationProviderPackageName" translatable="false">com.google.android.gms</string>
+
+    <bool name="config_enableFusedLocationOverlay" translatable="false">true</bool>
+    <string name="config_fusedLocationProviderPackageName" translatable="false">com.android.location.fused</string>
+
+    <string-array name="config_locationExtraPackageNames" translatable="false"></string-array>
+
+    <bool name="config_enableHardwareFlpOverlay" translatable="false">true</bool>
+    <string name="config_hardwareFlpPackageName" translatable="false">com.android.location.fused</string>
+
+    <bool name="config_enableGeocoderOverlay" translatable="false">true</bool>
+    <string name="config_geocoderProviderPackageName" translatable="false">com.google.android.gms</string>
+
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <item>com.google.android.gms</item>
+        <item>com.android.location.fused</item>
+    </string-array>
+</resources>
