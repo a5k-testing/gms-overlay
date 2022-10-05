@@ -12,7 +12,6 @@ buildscript {
     ext.androidCompileSdk = 33
 
     repositories {
-        google()
         mavenCentral()
     }
 
@@ -23,7 +22,6 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+        //mavenCentral()
     }
 }
