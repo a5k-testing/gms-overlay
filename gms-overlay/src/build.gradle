@@ -16,6 +16,10 @@ android {
         targetSdkVersion androidTargetSdk
     }
 
+    aaptOptions {
+        additionalParameters "--no-resource-deduping --no-resource-removal --auto-add-overlay"
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
