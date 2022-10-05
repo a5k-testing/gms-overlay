@@ -1,1 +1,15 @@
+// -*- coding: utf-8; mode: conf-javaprop -*-
+// SPDX-FileCopyrightText: none
+// SPDX-License-Identifier: CC0-1.0
+// SPDX-FileType: SOURCE
+
+buildscript {
+    apply from: 'dependencies.gradle'
+}
+
+plugins {
+    id 'com.gradle.enterprise' version "${gradleBuildScanVersion}"  /* New name of com.gradle.build-scan */
+}
+
+rootProject.name = 'microG runtime resource overlays'
 include 'gms-overlay'
