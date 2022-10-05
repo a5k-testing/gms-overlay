@@ -10,7 +10,6 @@ android {
     buildToolsVersion "$androidBuildVersionTools"
 
     defaultConfig {
-        //applicationId 'com.android.gms.overlay'
         versionName '1.0'
         versionCode 1
         minSdkVersion androidMinSdk
@@ -18,7 +17,7 @@ android {
     }
 
     aaptOptions {
-        additionalParameters '--no-Xresource-deduping'
+        additionalParameters '--no-resource-deduping'
         additionalParameters '--no-resource-removal'
     }
 }
