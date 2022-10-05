@@ -22,9 +22,9 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: "build"
-      - name: "List"
+      - name: "Lint"
         run: |
-          #ls -ARFl --color=always -- ./gms-overlay/build
+          cat ./gms-overlay/build/reports/lint-results-debug.html
       - name: "Upload artifact"
         if: "${{ github.ref == 'refs/heads/main' }}"
         uses: actions/upload-artifact@v3
