@@ -4,7 +4,7 @@
 // SPDX-FileType: SOURCE
 
 buildscript {
-    ext.androidBuildGradleVersion = '7.3.3'
+    ext.androidBuildGradleVersion = '7.3.0'
     ext.androidBuildVersionTools = '33.0.0'
 
     ext.androidMinSdk = 21
