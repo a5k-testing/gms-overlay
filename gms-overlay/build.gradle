@@ -28,6 +28,7 @@ android {
     }
 
     aaptOptions {
-        additionalParameters '--no-resource-deduping --no-resource-removal --auto-add-overlay'
+        additionalParameters '--no-resource-deduping'
+        additionalParameters '--no-resource-removal'
     }
 }
