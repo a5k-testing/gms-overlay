@@ -21,6 +21,9 @@ buildscript {
     }
 }
 
-subprojects {
-    group = 'net.ale5000'
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
