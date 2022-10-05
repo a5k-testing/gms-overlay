@@ -10,18 +10,24 @@ android {
     buildToolsVersion "$androidBuildVersionTools"
 
     defaultConfig {
+        applicationId 'com.android.gms.overlay'
         versionName '1.0'
         versionCode '1'
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
     }
 
-    aaptOptions {
-        additionalParameters '--no-resource-deduping' '--no-resource-removal' '--auto-add-overlay'
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+
+        debug{
+            minifyEnabled false
+        }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    aaptOptions {
+        additionalParameters '--no-resource-deduping' '--no-resource-removal' '--auto-add-overlay'
     }
 }
