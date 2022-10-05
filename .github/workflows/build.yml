@@ -24,7 +24,7 @@ jobs:
           arguments: "build"
       - name: "List"
         run: |
-          ls -ARFl --color=always -- ./gms-overlay/build
+          #ls -ARFl --color=always -- ./gms-overlay/build
       - name: "Upload artifact"
         if: "${{ github.ref == 'refs/heads/main' }}"
         uses: actions/upload-artifact@v3
