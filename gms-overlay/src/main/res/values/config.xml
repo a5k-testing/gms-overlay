@@ -27,4 +27,9 @@
         <item>com.google.android.gms</item>
         <item>com.android.location.fused</item>
     </string-array>
+
+    <bool name="strict_location_check">false</bool>
+
+    <!-- Android 11+ -->
+    <string name="exposure_notification_package">com.google.android.gms</string>
 </resources>
