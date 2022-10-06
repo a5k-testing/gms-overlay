@@ -12,7 +12,8 @@ android
 
     defaultConfig
     {
-        applicationId 'com.android.gms.location.overlay'
+        namespace 'com.android.gms.location.overlay'
+        applicationId 'com.android.gms.location.overlay2'
         versionName versionName
         versionCode versionCode
         minSdkVersion androidMinSdk
