@@ -22,7 +22,7 @@ jobs:
         shell: bash
         run: |
           rm -f -- './keystore.jks'
-          keytool -genkey -keystore './keystore.jks' -keyalg 'RSA' -keysize '2048' -validity '7300' -alias 'random-temp-key' -dname 'C=US, ST=California, L=Mountain View, O=ale5000-variable, OU=Android, CN=Android' -storepass 'temp-pass' -keypass 'temp-pass'
+          keytool -genkey -keystore './keystore.jks' -keyalg 'RSA' -keysize '2048' -validity '7300' -alias 'random-temp-key' -dname 'C=US, O=ale5000-variable, OU=Android, CN=Android' -storepass 'temp-pass' -keypass 'temp-pass'
       - name: "Gradle build"
         uses: gradle/gradle-build-action@v2
         with:
