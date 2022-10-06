@@ -5,19 +5,27 @@
 
 apply plugin: 'com.android.application'
 
-android {
+android
+{
     compileSdkVersion androidCompileSdk
     buildToolsVersion "$androidBuildVersionTools"
 
-    defaultConfig {
-        //versionName '1.0'
-        //versionCode 1
+    defaultConfig
+    {
+        versionName versionName
+        versionCode versionCode
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
     }
 
-    aaptOptions {
+    aaptOptions
+    {
         additionalParameters '--no-resource-deduping'
         additionalParameters '--no-resource-removal'
     }
+}
+
+if(project.file('user.gradle').exists())
+{
+    apply from: "${project.file('user.gradle')}"
 }
