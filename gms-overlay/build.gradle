@@ -22,7 +22,7 @@ android
 
     signingConfigs
     {
-        release
+        production
         {
             keyAlias 'random-temp-key'
             keyPassword 'temp-pass'
@@ -37,7 +37,7 @@ android
     {
         release
         {
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.production
         }
     }
 
