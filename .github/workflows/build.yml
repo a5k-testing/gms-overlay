@@ -18,6 +18,11 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "17"
+      - name: "Generate random keys"
+        shell: bash
+        run: |
+          rm -f -- './keystore.jks'
+          keytool -genkey -keystore './keystore.jks' -keyalg 'RSA' -keysize '2048' -validity '730' -alias 'random-temp-key' -dname "CN=ale5000-variable" -storepass 'temp-key-pass'
       - name: "Gradle build"
         uses: gradle/gradle-build-action@v2
         with:
