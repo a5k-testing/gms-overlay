@@ -25,9 +25,9 @@ android
         release
         {
             keyAlias 'random-temp-key'
-            keyPassword 'temp-key-pass'
+            keyPassword 'temp-pass'
             storeFile rootProject.file('keystore.jks')
-            storePassword 'temp-store-pass'
+            storePassword 'temp-pass'
             v1SigningEnabled true
             v2SigningEnabled true
         }
