@@ -17,11 +17,15 @@ android
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
     }
+    
+    lintOptions
+    {
+        disable 'UnusedResources','MissingApplicationIcon'
+    }
 
     aaptOptions
     {
-        additionalParameters '--no-resource-deduping'
-        additionalParameters '--no-resource-removal'
+        additionalParameters '--no-resource-deduping','--no-resource-removal'
     }
 }
 
