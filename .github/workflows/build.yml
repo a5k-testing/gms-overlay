@@ -24,11 +24,13 @@ jobs:
           arguments: "build"
       - name: "Lint"
         run: |
-          cat ./gms-overlay/build/reports/lint-results-debug.html
+          #cat ./gms-overlay/build/reports/lint-results-debug.html
       - name: "Upload artifact"
         if: "${{ github.ref == 'refs/heads/main' }}"
         uses: actions/upload-artifact@v3
         with:
           name: "GMS overlay (extract it)"
-          path: "gms-overlay/build/outputs/apk/release/*.apk"
+          path: |
+            ./gms-overlay/build/outputs/apk/release/*.apk
+            ./gms-overlay/build/reports/lint-results-debug.html
           retention-days: 7
