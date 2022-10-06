@@ -12,14 +12,16 @@ android
 
     defaultConfig
     {
-        applicationId 'com.android.gms.location.overlay'
-        namespace applicationId
+        namespace 'com.android.gms.location.overlay'
+        applicationId namespace
+        //applicationId 'com.android.gms.location.overlay'
+        //namespace applicationId
         versionName versionName
         versionCode versionCode
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
     }
-    
+
     lintOptions
     {
         disable 'UnusedResources','MissingApplicationIcon'
