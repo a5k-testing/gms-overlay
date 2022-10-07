@@ -30,8 +30,6 @@
         <item>com.android.location.fused</item>
     </string-array>
 
-    <string name="config_systemAutomotiveProjection" translatable="false">com.google.android.projection.gearhead</string>  <!-- Android 12+ -->
-
 
     <!-- Bluetooth -->
 
