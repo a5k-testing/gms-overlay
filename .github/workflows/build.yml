@@ -33,6 +33,6 @@ jobs:
         with:
           name: "GMS overlay (extract it)"
           path: |
-            ./gms-overlay/build/outputs/apk/release/*.apk
-            ./gms-overlay/build/reports/lint-results-debug.html
+            ./*/build/outputs/apk/release/*-release.apk
+            ./*/build/reports/lint-*.html
           retention-days: 7
