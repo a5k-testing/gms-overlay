@@ -17,7 +17,7 @@
     <bool name="config_enableFusedLocationOverlay" translatable="false">true</bool>
     <string name="config_fusedLocationProviderPackageName" translatable="false">com.android.location.fused</string>
 
-    <string-array name="config_locationExtraPackageNames" translatable="false"></string-array>
+    <string name="config_comboNetworkLocationProvider" translatable="false">@null</string>
 
     <bool name="config_enableHardwareFlpOverlay" translatable="false">true</bool>
     <string name="config_hardwareFlpPackageName" translatable="false">com.android.location.fused</string>
