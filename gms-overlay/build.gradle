@@ -5,8 +5,6 @@
 
 apply plugin: 'com.android.application'
 
-archivesBaseName = 'GMSLocationOverlay'
-
 android
 {
     compileSdkVersion androidCompileSdk
@@ -14,6 +12,7 @@ android
 
     defaultConfig
     {
+        archivesBaseName = 'GMSLocationOverlay'
         applicationId 'com.android.gms.location.overlay'
         namespace applicationId
         versionName ourVersionName
