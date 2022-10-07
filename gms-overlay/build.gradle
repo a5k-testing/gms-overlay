@@ -14,8 +14,8 @@ android
     {
         applicationId 'com.android.gms.location.overlay'
         namespace applicationId
-        versionName appVersionName
-        versionCode appVersionCode
+        versionName ourVersionName
+        versionCode ourVersionCode
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
     }
