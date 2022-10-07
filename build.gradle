@@ -3,9 +3,17 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileType: SOURCE
 
-buildscript {
-    ext.versionName = '1.0'
-    ext.versionCode = '1'
+static int getVersionCode(String versionName)
+{
+    String[] parts = versionName.split('\\.')
+    if(parts.length == 3)
+        return (Byte.parseByte(parts[0]) * 1000000) + (Byte.parseByte(parts[1]) * 1000) + Byte.parseByte(parts[2])
+    return 0
+}
+
+buildscript
+{
+    ext.appVersionName = '1.0.0'
 
     ext.androidBuildGradleVersion = '7.2.2'
     ext.androidBuildVersionTools = '33.0.0'
@@ -22,8 +30,10 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$androidBuildGradleVersion"
     }
-    version = 'v' + versionName
+    version = 'v' + appVersionName
 }
+
+ext.appVersionCode = getVersionCode(ext.appVersionName)
 
 allprojects
 {
