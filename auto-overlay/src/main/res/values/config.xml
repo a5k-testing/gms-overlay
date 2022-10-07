@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: none
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileType: SOURCE
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Frameworks base -->
+
+    <string name="config_systemAutomotiveProjection" translatable="false">com.google.android.projection.gearhead</string>  <!-- Android 12+ -->
+</resources>
