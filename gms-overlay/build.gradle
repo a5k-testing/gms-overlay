@@ -48,7 +48,7 @@ android
 
     lintOptions
     {
-        disable 'UnusedResources','MissingApplicationIcon'
+        disable 'UnusedResources'
     }
 }
 
