@@ -5,6 +5,8 @@
 
 apply plugin: 'com.android.application'
 
+archivesBaseName = 'GMSAutoOverlay'
+
 android
 {
     compileSdkVersion androidCompileSdk
