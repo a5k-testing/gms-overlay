@@ -13,7 +13,7 @@ static int getVersionCode(String versionName)
 
 buildscript
 {
-    ext.appVersionName = '1.0.0'
+    ext.ourVersionName = '1.0.0'
 
     ext.androidBuildGradleVersion = '7.2.2'
     ext.androidBuildVersionTools = '33.0.0'
@@ -30,10 +30,10 @@ buildscript
     dependencies {
         classpath "com.android.tools.build:gradle:$androidBuildGradleVersion"
     }
-    version = 'v' + appVersionName
+    version = 'v' + ourVersionName
 }
 
-ext.appVersionCode = getVersionCode(ext.appVersionName)
+ext.ourVersionCode = getVersionCode(ext.ourVersionName)
 
 allprojects
 {
