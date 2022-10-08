@@ -12,5 +12,7 @@ plugins {
 }
 
 rootProject.name = 'microG runtime resource overlays'
-include 'gms-overlay'
+
+include 'location-overlay'
+include 'en-overlay'
 include 'auto-overlay'
