@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: none
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileType: SOURCE
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <overlay android:isStatic="true" android:priority="91" android:targetPackage="com.android.bluetooth" />
+    <application android:hasCode="false" tools:ignore="MissingApplicationIcon" />
+</manifest>
