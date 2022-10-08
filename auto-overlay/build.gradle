@@ -12,7 +12,7 @@ android
 
     defaultConfig
     {
-        archivesBaseName = 'GMSAutoOverlay'
+        archivesBaseName = 'GmsAutoOverlay'
         applicationId 'com.android.gms.auto.overlay'
         namespace applicationId
         versionName ourVersionName

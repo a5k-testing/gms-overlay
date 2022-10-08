@@ -12,7 +12,7 @@ android
 
     defaultConfig
     {
-        archivesBaseName = 'GMSLocationOverlay'
+        archivesBaseName = 'GmsLocationOverlay'
         applicationId 'com.android.gms.location.overlay'
         namespace applicationId
         versionName ourVersionName
