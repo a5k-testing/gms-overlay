@@ -25,8 +25,7 @@
     <string name="config_geocoderProviderPackageName" translatable="false">@null</string>
 
     <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- <item>com.google.android.gms</item> -->
+        <item>com.google.android.gms</item>
         <item>com.android.location.fused</item>
     </string-array>
-    <bool name="config_showNavigationBar">true</bool>
 </resources>
