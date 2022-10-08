@@ -6,7 +6,6 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Frameworks base -->
-
+    <!-- Frameworks base: https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/values/config.xml -->
     <string name="config_systemAutomotiveProjection" translatable="false">com.google.android.projection.gearhead</string>  <!-- Android 12+ -->
 </resources>

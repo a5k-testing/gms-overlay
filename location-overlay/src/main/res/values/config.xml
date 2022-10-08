@@ -6,10 +6,9 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Frameworks base -->
+    <!-- Frameworks base: https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/values/config.xml -->
 
-    <bool name="config_enableAutoPowerModes">true</bool>
-    <bool name="config_autoPowerModePrefetchLocation">true</bool>
+    <bool name="config_autoPowerModePrefetchLocation">true</bool>  <!-- Android 7+ -->
 
     <bool name="config_enableNetworkLocationOverlay" translatable="false">true</bool>
     <string name="config_networkLocationProviderPackageName" translatable="false">com.google.android.gms</string>
@@ -29,11 +28,4 @@
         <item>com.google.android.gms</item>
         <item>com.android.location.fused</item>
     </string-array>
-
-
-    <!-- Bluetooth -->
-
-    <bool name="strict_location_check">false</bool>
-
-    <string name="exposure_notification_package">com.google.android.gms</string>  <!-- Android 11+ -->
 </resources>
