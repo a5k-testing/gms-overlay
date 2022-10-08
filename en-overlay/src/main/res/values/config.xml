@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: none
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileType: SOURCE
+-->
+
+<resources>
+    <!-- Bluetooth: https://android.googlesource.com/platform/packages/apps/Bluetooth/+/master/res/values/config.xml -->
+    <string name="exposure_notification_package">com.google.android.gms</string>  <!-- Android 11+ -->
+</resources>
