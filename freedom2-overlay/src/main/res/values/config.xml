@@ -6,7 +6,7 @@
 -->
 
 <resources>
-    <!-- Frameworks base: https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/values/config.xml -->
+    <!-- NetworkStack: https://android.googlesource.com/platform/packages/modules/NetworkStack/+/refs/heads/master/res/values/config.xml -->
 
     <!-- HTTP URL for network validation, to use for detecting captive portals. -->
     <string name="config_captive_portal_http_url" translatable="false">http://connectivity.ecloud.global</string>
