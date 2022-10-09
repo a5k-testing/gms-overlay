@@ -3,32 +3,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileType: SOURCE
 
-gradleEnterprise.buildScan {
-    termsOfServiceUrl 'https://gradle.com/terms-of-service'
-    termsOfServiceAgree 'yes'
-    publishAlwaysIf System.getenv('UPLOAD_BUILD_SCAN') != null
-}
-
-static short parseThreeDigitNumber(String numericString) {
-    short number = Short.parseShort(numericString)
-    if(number > 999)
-        throw new InvalidUserDataException('Value out of range. Value:"' + numericString + '"')
-
-    return number
-}
-
-static int getVersionCode(String versionName) {
-    String[] parts = versionName.split('\\.')
-    if(parts.length != 3)
-        throw new InvalidUserDataException('Invalid versionName')
-
-    return (parseThreeDigitNumber(parts[0]) * 1000000) + (parseThreeDigitNumber(parts[1]) * 1000) + parseThreeDigitNumber(parts[2])
-}
-
 buildscript {
     ext.ourVersionName = '1.0.0'
-    ext.androidMinSdk = 21
-
     apply from: 'dependencies.gradle'
 
     repositories {
@@ -39,10 +15,39 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:${androidBuildGradleVersion}"
     }
-    version = 'v' + ourVersionName
 }
 
-ext.ourVersionCode = getVersionCode(ext.ourVersionName)
+gradleEnterprise.buildScan {
+    termsOfServiceUrl 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree 'yes'
+    publishAlwaysIf System.getenv('UPLOAD_BUILD_SCAN') != null
+}
+
+static short parseThreeDigitNumber(String numericString) {
+    short number = Short.parseShort(numericString)
+    if(number > 999 || number < 0)
+        throw new InvalidUserDataException('Value out of range. Value:"' + numericString + '"')
+
+    return number
+}
+
+static int getVersionCode(String versionName) {
+    String[] parts = versionName.split('\\.')
+    if(parts.length != 3)
+        throw new InvalidUserDataException('Invalid versionName:' + versionName)
+
+    return (parseThreeDigitNumber(parts[0]) * 1000000) + (parseThreeDigitNumber(parts[1]) * 1000) + parseThreeDigitNumber(parts[2])
+}
+
+void configure() {
+    println name
+
+    ext.ourVersionCode = getVersionCode(ext.ourVersionName)
+    version = ext.ourVersionName + ' (' + ext.ourVersionCode + ')'
+    println 'Version: ' + version
+    println 'OS: ' + System.properties['os.name']
+}
+configure()
 
 allprojects {
     repositories {

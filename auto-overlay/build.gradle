@@ -3,7 +3,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileType: SOURCE
 
-apply plugin: 'com.android.application'
+plugins {
+   id 'com.android.application'
+}
 
 android {
     compileSdkVersion androidCompileSdk

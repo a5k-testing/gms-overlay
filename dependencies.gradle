@@ -13,6 +13,7 @@ ext {
     androidBuildGradleVersion = '7.2.2'
     androidBuildVersionTools = '33.0.0'
 
+    androidDefaultMinSdk = 21
     androidTargetSdk = 33
     androidCompileSdk = 33
 
