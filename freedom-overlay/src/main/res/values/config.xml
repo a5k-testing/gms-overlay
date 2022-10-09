@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: none
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileType: SOURCE
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Frameworks base: https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/values/config.xml -->
+
+    <!-- Enable emergency call when sim is locked or puk locked. Some countries/carriers do not allow emergency calls to be placed without the IMSI, which is locked in the SIM. -->
+    <bool name="config_enable_emergency_call_while_sim_locked">true</bool>
+
+    <string name="default_sms_application" translatable="false"></string>
+
+    <!-- Flag indicating whether the current device supports "Ask every time" for sms-->
+    <bool name="config_sms_ask_every_time_support">true</bool>
+
+    <string name="default_browser" translatable="false"></string>
+
+    <!-- IP address of the dns server to use if nobody else suggests one -->
+    <string name="config_default_dns_server" translatable="false">1.1.1.1</string>
+
+    <!-- Enables built-in SIP phone capability -->
+    <bool name="config_built_in_sip_phone">true</bool>
+
+    <!-- Remote server that can provide NTP responses. -->
+    <string translatable="false" name="config_ntpServer">time.cloudflare.com</string>
+
+    <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
+    <bool name="config_cellBroadcastAppLinks">true</bool>
+
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">32</integer>
+
+    <!-- Whether UI for multi user should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+
+    <!-- Whether WiFi display is supported by this device. -->
+    <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- Whether camera shutter sound is forced or not  (country specific). -->
+    <bool name="config_camera_sound_forced">false</bool>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Determines whether SafetyCenter feature is enabled. -->
+    <bool name="config_enableSafetyCenter">true</bool>
+
+    <!-- Flag indicating if help links for Settings app should be enabled. -->
+    <bool name="config_settingsHelpLinksEnabled">true</bool>
+
+    <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
+    <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
+</resources>
