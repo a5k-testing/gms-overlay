@@ -3,16 +3,29 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileType: SOURCE
 
-static int getVersionCode(String versionName)
-{
-    String[] parts = versionName.split('\\.')
-    if(parts.length == 3)
-        return (Byte.parseByte(parts[0]) * 1000000) + (Byte.parseByte(parts[1]) * 1000) + Byte.parseByte(parts[2])
-    return 0
+gradleEnterprise.buildScan {
+    termsOfServiceUrl 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree 'yes'
+    publishAlwaysIf System.getenv('UPLOAD_BUILD_SCAN') != null
 }
 
-buildscript
-{
+static short parseThreeDigitNumber(String numericString) {
+    short number = Short.parseShort(numericString)
+    if(number > 999)
+        throw new InvalidUserDataException('Value out of range. Value:"' + numericString + '"')
+
+    return number
+}
+
+static int getVersionCode(String versionName) {
+    String[] parts = versionName.split('\\.')
+    if(parts.length != 3)
+        throw new InvalidUserDataException('Invalid versionName')
+
+    return (parseThreeDigitNumber(parts[0]) * 1000000) + (parseThreeDigitNumber(parts[1]) * 1000) + parseThreeDigitNumber(parts[2])
+}
+
+buildscript {
     ext.ourVersionName = '1.0.0'
 
     ext.androidBuildGradleVersion = '7.2.2'
@@ -35,10 +48,8 @@ buildscript
 
 ext.ourVersionCode = getVersionCode(ext.ourVersionName)
 
-allprojects
-{
-    repositories
-    {
+allprojects {
+    repositories {
         mavenCentral()
         google()
     }

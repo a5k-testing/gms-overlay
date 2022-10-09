@@ -5,13 +5,11 @@
 
 apply plugin: 'com.android.application'
 
-android
-{
+android {
     compileSdkVersion androidCompileSdk
     buildToolsVersion "$androidBuildVersionTools"
 
-    defaultConfig
-    {
+    defaultConfig {
         archivesBaseName = 'GmsFreedomOverlay'
         applicationId 'com.android.gms.freedom.overlay'
         namespace applicationId
@@ -21,10 +19,8 @@ android
         targetSdkVersion androidTargetSdk
     }
 
-    signingConfigs
-    {
-        production
-        {
+    signingConfigs {
+        production {
             keyAlias 'random-temp-key'
             keyPassword 'temp-pass'
             storeFile rootProject.file('keystore.jks')
@@ -34,26 +30,21 @@ android
         }
     }
 
-    buildTypes
-    {
-        release
-        {
+    buildTypes {
+        release {
             signingConfig signingConfigs.production
         }
     }
 
-    aaptOptions
-    {
+    aaptOptions {
         additionalParameters '--no-resource-deduping','--no-resource-removal'
     }
 
-    lintOptions
-    {
+    lintOptions {
         disable 'UnusedResources'
     }
 }
 
-if(project.file('user.gradle').exists())
-{
+if(project.file('user.gradle').exists()) {
     apply from: "${project.file('user.gradle')}"
 }
