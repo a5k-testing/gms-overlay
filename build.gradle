@@ -27,13 +27,9 @@ static int getVersionCode(String versionName) {
 
 buildscript {
     ext.ourVersionName = '1.0.0'
-
-    ext.androidBuildGradleVersion = '7.2.2'
-    ext.androidBuildVersionTools = '33.0.0'
-
     ext.androidMinSdk = 21
-    ext.androidTargetSdk = 33
-    ext.androidCompileSdk = 33
+
+    apply from: 'dependencies.gradle'
 
     repositories {
         mavenCentral()
@@ -41,7 +37,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:$androidBuildGradleVersion"
+        classpath "com.android.tools.build:gradle:${androidBuildGradleVersion}"
     }
     version = 'v' + ourVersionName
 }
