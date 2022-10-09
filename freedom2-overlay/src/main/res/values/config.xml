@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: none
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileType: SOURCE
+-->
+
+<resources>
+    <!-- Frameworks base: https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/values/config.xml -->
+
+    <!-- HTTP URL for network validation, to use for detecting captive portals. -->
+    <string name="config_captive_portal_http_url" translatable="false">http://connectivity.ecloud.global</string>
+    <!-- HTTPS URL for network validation, to use for confirming internet connectivity. -->
+    <string name="config_captive_portal_https_url" translatable="false">https://connectivity.ecloud.global</string>
+
+    <string-array name="config_captive_portal_http_urls" translatable="false">
+        <item>http://connectivity.ecloud.global</item>
+        <item>http://204.ecloud.global</item>
+        <item>http://ecloud.global/generate_204</item>
+    </string-array>
+    <string-array name="config_captive_portal_https_urls" translatable="false">
+        <item>https://connectivity.ecloud.global</item>
+        <item>https://204.ecloud.global</item>
+        <item>https://ecloud.global/generate_204</item>
+    </string-array>
+
+    <string-array name="config_captive_portal_fallback_urls" translatable="false">
+        <item>http://204.ecloud.global</item>
+        <item>http://ecloud.global/generate_204</item>
+    </string-array>
+
+     <!-- Customized default DNS Servers address. -->
+    <string-array name="config_default_dns_servers" translatable="false">
+        <item>1.0.0.1</item>
+        <item>1.1.1.1</item>
+    </string-array>
+
+    <!-- Configuration for including DHCP client hostname option -->
+    <bool name="config_dhcp_client_hostname">false</bool>
+</resources>

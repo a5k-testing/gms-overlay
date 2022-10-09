@@ -12,8 +12,8 @@ android {
     buildToolsVersion "$androidBuildVersionTools"
 
     defaultConfig {
-        archivesBaseName = 'GmsFreedom1Overlay'
-        applicationId 'com.android.gms.freedom1.overlay'
+        archivesBaseName = 'GmsFreedom2Overlay'
+        applicationId 'com.android.gms.freedom2.overlay'
         namespace applicationId
         versionName ourVersionName
         versionCode ourVersionCode
