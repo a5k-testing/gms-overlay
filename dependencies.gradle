@@ -11,7 +11,7 @@ ext {
     // compileSdkVersion >= Support Library version
 
     androidBuildGradleVersion = '7.2.2'
-    androidBuildVersionTools = '33.0.1'
+    androidBuildVersionTools = '33.0.0'
 
     androidTargetSdk = 33
     androidCompileSdk = 33
