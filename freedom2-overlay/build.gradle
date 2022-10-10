@@ -17,7 +17,7 @@ android {
         namespace applicationId
         versionName ourVersionName
         versionCode ourVersionCode
-        minSdkVersion androidDefaultMinSdk
+        minSdkVersion 26
         targetSdkVersion androidTargetSdk
     }
 
