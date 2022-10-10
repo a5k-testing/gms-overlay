@@ -39,5 +39,5 @@
     </string-array>
 
     <!-- Configuration for including DHCP client hostname option -->
-    <bool name="config_dhcp_client_hostname">false</bool>
+    <bool name="config_dhcp_client_hostname">false</bool>  <!-- Android 11+ -->
 </resources>
