@@ -6,6 +6,6 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
-    <overlay android:isStatic="true" android:priority="85" android:targetPackage="com.android.networkstack" tools:ignore="UnusedAttribute" />
+    <overlay android:isStatic="true" android:priority="85" android:targetPackage="com.android.networkstack" />
     <application android:hasCode="false" tools:ignore="MissingApplicationIcon" />
 </manifest>
