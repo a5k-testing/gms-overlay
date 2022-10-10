@@ -6,20 +6,22 @@
 -->
 
 <resources>
-    <!-- NetworkStack: https://android.googlesource.com/platform/packages/modules/NetworkStack/+/refs/heads/master/res/values/config.xml -->
-    <!-- LineageOS NetworkStack: https://github.com/LineageOS/android_packages_modules_NetworkStack/blob/HEAD/res/values/config.xml -->
+<!--
+    NOTE: This should be mostly Android 10+ but I have found a reference to Android 8.
+    NetworkStack: https://android.googlesource.com/platform/packages/modules/NetworkStack/+/refs/heads/master/res/values/config.xml
+    NetworkStack (Android 8): https://android.googlesource.com/platform/packages/modules/NetworkStack/+/refs/heads/oreo-mr1-iot-release/res/values/config.xml
+    LineageOS NetworkStack: https://github.com/LineageOS/android_packages_modules_NetworkStack/blob/HEAD/res/values/config.xml
+-->
 
     <!-- HTTP URL for network validation, to use for detecting captive portals. -->
     <string name="config_captive_portal_http_url" translatable="false">http://connectivity.ecloud.global</string>
     <!-- HTTPS URL for network validation, to use for confirming internet connectivity. -->
     <string name="config_captive_portal_https_url" translatable="false">https://connectivity.ecloud.global</string>
 
-    <string-array name="config_captive_portal_http_urls" translatable="false">
+    <string-array name="config_captive_portal_http_urls" translatable="false">  <!-- Android 11+ -->
         <item>http://connectivity.ecloud.global</item>
-        <item>http://204.ecloud.global</item>
-        <item>http://ecloud.global/generate_204</item>
     </string-array>
-    <string-array name="config_captive_portal_https_urls" translatable="false">
+    <string-array name="config_captive_portal_https_urls" translatable="false">  <!-- Android 11+ -->
         <item>https://connectivity.ecloud.global</item>
         <item>https://204.ecloud.global</item>
         <item>https://ecloud.global/generate_204</item>
