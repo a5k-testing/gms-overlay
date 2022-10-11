@@ -16,5 +16,7 @@ rootProject.name = 'microG runtime resource overlays'
 include 'location-overlay'
 include 'freedom1-overlay'
 include 'freedom2-overlay'
-include 'auto-overlay'
 include 'en-overlay'
+include 'reg-overlay'
+
+include 'auto-overlay'
