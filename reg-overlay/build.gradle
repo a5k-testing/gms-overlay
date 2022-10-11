@@ -1,0 +1,52 @@
+// -*- coding: utf-8; mode: conf-javaprop -*-
+// SPDX-FileCopyrightText: (c) 2022 ale5000
+// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-FileType: SOURCE
+
+plugins {
+   id 'com.android.application'
+}
+
+android {
+    compileSdkVersion androidCompileSdk
+    buildToolsVersion "$androidBuildVersionTools"
+
+    defaultConfig {
+        archivesBaseName = 'GmsRegOverlay'
+        applicationId 'com.android.gms.reg.overlay'
+        namespace applicationId
+        versionName ourVersionName
+        versionCode ourVersionCode
+        minSdkVersion androidDefaultMinSdk
+        targetSdkVersion androidTargetSdk
+    }
+
+    signingConfigs {
+        production {
+            keyAlias 'random-temp-key'
+            keyPassword 'temp-pass'
+            storeFile rootProject.file('keystore.jks')
+            storePassword 'temp-pass'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.production
+        }
+    }
+
+    aaptOptions {
+        additionalParameters '--no-resource-deduping','--no-resource-removal'
+    }
+
+    lintOptions {
+        disable 'UnusedResources'
+    }
+}
+
+if(project.file('user.gradle').exists()) {
+    apply from: "${project.file('user.gradle')}"
+}
