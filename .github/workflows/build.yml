@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: "Check out code"
         uses: actions/checkout@v3
-      - name: "Set up Java"
-        uses: actions/setup-java@v3
-        with:
-          distribution: "temurin"
-          java-version: "17"
-          cache: "gradle"
+      #- name: "Set up Java"
+        #uses: actions/setup-java@v3
+        #with:
+          #distribution: "temurin"
+          #java-version: "17"
+          #cache: "gradle"
       - name: "Generate random keys"
         shell: bash
         run: |
@@ -26,8 +26,8 @@ jobs:
           keytool -genkey -keystore './keystore.jks' -keyalg 'RSA' -keysize '2048' -validity '7300' -alias 'random-temp-key' -dname 'C=US, O=ale5000-variable, OU=Android, CN=Android' -storepass 'temp-pass' -keypass 'temp-pass'
       - name: "Gradle build"
         uses: gradle/gradle-build-action@v2
-        #with:
-          #arguments: "randomSign build"
+        with:
+          arguments: "randomSign build"
       - name: "Upload artifact"
         if: "${{ github.ref == 'refs/heads/main' }}"
         uses: actions/upload-artifact@v3
