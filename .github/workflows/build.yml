@@ -34,6 +34,6 @@ jobs:
         with:
           name: "microG unofficial runtime resource overlays (extract them)"
           path: |
-            ./*/build/outputs/apk/release/*-release.apk
-            ./*/build/reports/lint-*.html
+            ./*/build/outputs/apk/release/*
+            ./*/build/reports/*
           retention-days: 7
