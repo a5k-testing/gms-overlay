@@ -22,7 +22,7 @@ android {
     }
 
     signingConfigs {
-        production {
+        randomCert {
             keyAlias 'random-temp-key'
             keyPassword 'temp-pass'
             storeFile rootProject.file('keystore.jks')
@@ -35,7 +35,6 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            signingConfig signingConfigs.production
         }
     }
 
@@ -51,7 +50,7 @@ android {
 tasks.register('randomSign') {
     doFirst {
         println 'Using random signature...'
-        android.buildTypes.release.signingConfig android.signingConfigs.production
+        android.buildTypes.release.signingConfig android.signingConfigs.randomCert
     }
 }
 
