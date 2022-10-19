@@ -11,7 +11,7 @@ plugins {
     id 'com.gradle.enterprise' version "${gradleBuildScanVersion}"  /* New name of com.gradle.build-scan */
 }
 
-rootProject.name = 'microG runtime resource overlays'
+rootProject.name = 'microG unofficial runtime resource overlays (RROs)'
 
 include 'location-overlay'
 include 'freedom1-overlay'
