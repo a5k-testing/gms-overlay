@@ -34,6 +34,7 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled true
             signingConfig signingConfigs.production
         }
     }
@@ -44,6 +45,13 @@ android {
 
     lintOptions {
         disable 'UnusedResources'
+    }
+}
+
+tasks.register('randomSign') {
+    doFirst {
+        println 'Using random signature...'
+        android.buildTypes.release.signingConfig android.signingConfigs.production
     }
 }
 
