@@ -27,7 +27,7 @@ jobs:
       - name: "Gradle build"
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: "buildRelease"
+          arguments: "build"
       - name: "Upload artifact"
         if: "${{ github.ref == 'refs/heads/main' }}"
         uses: actions/upload-artifact@v3
